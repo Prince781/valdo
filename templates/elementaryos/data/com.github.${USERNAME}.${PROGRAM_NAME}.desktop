@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=${PROJECT_NAME}
+GenericName=${PROJECT_NAME} App
+Comment=${PROJECT_SUMMARY}
+Categories=${PROJECT_CATEGORIES}
+Exec=com.github.${USERNAME}.${PROGRAM_NAME}
+Icon=com.github.${USERNAME}.${PROGRAM_NAME}
+Terminal=false
+Type=Application
+Keywords=${PROJECT_KEYWORDS}

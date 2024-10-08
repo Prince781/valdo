@@ -1,0 +1,31 @@
+{
+  "description": "a starter elementary OS app in GTK4",
+  "variables": {
+    "PROGRAM_NAME": {
+      "summary": "the name of the program",
+      "default": "/${PROJECT_NAME}/\\w+/\\u\\0/(\\w)?\\W+(\\w)?(\\w*)/\\1\\u\\2\\L\\3\\E/^\\w/\\u\\0/",
+      "pattern": "^[[:word:]-]+$"
+    },
+    "PROJECT_SUMMARY": {
+      "summary": "a very short summary of the project",
+      "default": "a new app for elementary OS"
+    },
+    "PROJECT_CATEGORIES": {
+      "summary": "categories (semicolon-separated)",
+      "pattern": "^((AudioVideo|Audio|Video|Development|Education|Game|Graphics|Network|Office|Science|Settings|System|Utility);)+$"
+    },
+    "PROJECT_KEYWORDS": {
+      "summary": "keywords (semicolon-separated)",
+      "default": "/${PROJECT_NAME}/\\W+/;/^;+//\\w+/\\L\\0\\E/[^;]$/\\0;/",
+      "pattern": "^(\\w+;)+$"
+    }
+  },
+  "templates": [
+    "com.github.${USERNAME}.${PROGRAM_NAME}.yml",
+    "meson.build",
+    "README.md",
+    "data/com.github.${USERNAME}.${PROGRAM_NAME}.appdata.xml",
+    "data/com.github.${USERNAME}.${PROGRAM_NAME}.desktop",
+    "src/Application.vala"
+  ]
+}
